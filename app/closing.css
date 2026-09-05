@@ -10,3 +10,6 @@
 @media(max-width:900px){.closing-task{left:-4%}.closing-timer{right:-3%}.closing-quiet{left:2%}.closing-spark-left{left:18%}.closing-spark-right{right:14%}}
 @media(max-width:650px){.closing{min-height:640px;padding:135px 18px}.closing-content{max-width:100%}.closing-task{left:12px;top:28px;scale:.84}.closing-timer{right:9px;top:78px;scale:.82}.closing-quiet{left:18px;bottom:30px;scale:.9}.closing-spark-left{left:auto;right:36px;bottom:37px;font-size:30px}.closing-spark-right{right:-5px;bottom:125px;font-size:52px;opacity:.55}.closing-orbit-one{width:420px;height:420px;left:-280px;bottom:-230px}.closing-orbit-two{width:360px;height:360px;right:-270px;top:-190px}.closing h2{font-size:clamp(32px,9vw,45px)}.closing .number-chip{display:inline-block}.closing-caption{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.closing-task,.closing-timer,.closing-quiet,.closing-spark{animation:none}}
+
+.closing-spark-left .gm{filter:drop-shadow(1px 2px #ffd5b9) drop-shadow(2px 4px #c96935)}
+.closing-spark-right .gm{filter:drop-shadow(1px 2px #a9caff) drop-shadow(2px 4px #2360c5) drop-shadow(3px 6px #174fa9)}
