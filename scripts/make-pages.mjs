@@ -24,9 +24,9 @@ if (!existsSync(path.join(dist, 'server', 'wrangler.json'))) {
 }
 
 const server = spawn(
-  process.platform === 'win32' ? 'npx.cmd' : 'npx',
+  'npx',
   ['wrangler', 'dev', '--config', 'dist/server/wrangler.json', '--port', String(PORT), '--ip', '127.0.0.1'],
-  {cwd: root, stdio: 'ignore'},
+  {cwd: root, stdio: 'ignore', shell: true},
 );
 
 async function waitForServer() {
