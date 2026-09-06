@@ -17,6 +17,7 @@ const dist = path.join(root, 'dist');
 const docs = path.join(root, 'docs');
 const PORT = 8788;
 const ORIGIN = `http://127.0.0.1:${PORT}`;
+const wrangler = path.join(root, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
 
 if (!existsSync(path.join(dist, 'server', 'wrangler.json'))) {
   console.error('Нет dist/ — сначала выполните: npm run build');
@@ -24,9 +25,9 @@ if (!existsSync(path.join(dist, 'server', 'wrangler.json'))) {
 }
 
 const server = spawn(
-  'npx',
-  ['wrangler', 'dev', '--config', 'dist/server/wrangler.json', '--port', String(PORT), '--ip', '127.0.0.1'],
-  {cwd: root, stdio: 'ignore', shell: true},
+  process.execPath,
+  [wrangler, 'dev', '--config', 'dist/server/wrangler.json', '--port', String(PORT), '--ip', '127.0.0.1'],
+  {cwd: root, stdio: 'ignore'},
 );
 
 async function waitForServer() {
